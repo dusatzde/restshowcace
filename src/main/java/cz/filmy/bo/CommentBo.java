@@ -19,7 +19,7 @@ public class CommentBo {
     private Long commentId;
 
     //H2 format: yyyy-MM-dd hh:mm:ss
-    @Column(columnDefinition="DATETIME")
+//    @Column(columnDefinition="DATETIME")
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
