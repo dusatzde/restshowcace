@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+<meta charset="UTF-8">
+<title>Databáze filmů - Sample Project</title>
+<link href="css/general.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<h1>Movie database - REST API workshop</h1>
+<h2>Spring REST API Service - sample app (Spring Boot, Spring Data, SpringFox - Swagger, OAuth2)</h2>
+<ul>
+    <li>
+        <a href="/h2-console/" target="_blank">H2 Database console</a>
+    </li>
+    <li>
+        <a href="./swagger-ui.html" target="_blank">API showcase + documentation</a>
+    </li>
+    <li><a href="/v2/api-docs?group=api" target="_blank">Swagger contract</a></li>
+</ul>
+<h3>OAuth2 autentification and authorization</h3>
+<ul>
+    <li>Authorization Server, Resource Server, Client (all in one app)</li>
+    <li>Grant_type password</li>
+    <li>
+        <strong>How to get access token?</strong>
+        <ul>
+            <li>User Admin with password "password" (authorization ADMIN )</li>
+            <li>POST: https://localhost:8443/oauth/token?grant_type=password&username=Admin&password=password</li>
+        </ul>
+    </li>
+    <li>
+        <strong>How to use access token?</strong>
+        <ul>
+            <li>List all users (only for authorization ADMIN )</li>
+            <li>https://localhost:8443/api/v1/users/?access_token=1219088d-986c-416d-8de7-440901b88a6a</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
