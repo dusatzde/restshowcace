@@ -2,13 +2,14 @@ package cz.filmy.dto;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
 
 /**
  * Created by Zdenek on 06-Dec-16.
  */
 
 @XmlRootElement
-public class ApiResponse {
+public class ApiResponse  implements Serializable {
     public static final int ERROR = 1;
     public static final int WARNING = 2;
     public static final int INFO = 3;

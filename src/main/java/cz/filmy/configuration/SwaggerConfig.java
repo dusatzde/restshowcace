@@ -36,13 +36,13 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Filmova databaze REST API")
-                .description("Spring REST Sample with Swagger")
+                .title("Workshop: film database REST API")
+                .description("Spring Boot & Swagger on Heroku sample project")
                 .termsOfServiceUrl("")
                 .contact(new Contact("Zdenek Dusatko", "", "zdenek.dusatko@gmail.com"))
                 .license("Apache License Version 2.0")
                 .licenseUrl("")
-                .version("2.0")
+                .version("1.0")
                 .build();
     }
 

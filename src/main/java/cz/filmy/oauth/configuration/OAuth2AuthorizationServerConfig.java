@@ -37,7 +37,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
 
         clients.inMemory()
                 .withClient("my-trusted-client") //client registration unique identificator
-                .authorizedGrantTypes("password")
+                .authorizedGrantTypes("authorization_code", "password", "refresh_token")
                 .authorities("ROLE_ADMIN", "ROLE_USER")
                 .scopes("read", "write", "trust")
                 .secret("secret") //Client registration (password)

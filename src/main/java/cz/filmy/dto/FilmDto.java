@@ -2,10 +2,12 @@ package cz.filmy.dto;
 
 import cz.filmy.bo.FilmBo;
 
+import java.io.Serializable;
+
 /**
  * Created by Zdenek on 12-Dec-16.
  */
-public class FilmDto {
+public class FilmDto  implements Serializable {
 
     private Long filmId;
     private Integer year;

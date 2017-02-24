@@ -7,18 +7,20 @@ import cz.filmy.bo.UserBo;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Zdenek on 12-Dec-16.
  */
-public class CommentDto {
+public class CommentDto implements Serializable{
 
     private Long commentId;
     private Date date;
     private String text;
     private Long filmId;
     private Long userId;
+    private String userName;
 
     public CommentDto(){
 
@@ -30,6 +32,7 @@ public class CommentDto {
         text = commentBo.getText();
         filmId = (commentBo.getFilm() != null)?commentBo.getFilm().getFilmId(): -1;
         userId = (commentBo.getUser() != null)?commentBo.getUser().getUserId(): -1;
+        userName = (commentBo.getUser() != null)?commentBo.getUser().getUserName(): "";
     }
 
     public Long getCommentId() {
@@ -70,5 +73,13 @@ public class CommentDto {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
