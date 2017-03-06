@@ -3,6 +3,7 @@ package cz.filmy.endpoint;
 import cz.filmy.dto.ApiResponse;
 import cz.filmy.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

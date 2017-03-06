@@ -16,7 +16,6 @@ import java.util.Set;
 @Entity
 public class AuthorityBo implements GrantedAuthority{
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long authorityId;
