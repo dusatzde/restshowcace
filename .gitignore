@@ -1,0 +1,61 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### client ###
+client/src/app/**/*.js
+client/src/app/**/*.js.map
+client/src/e2e/**/*.js
+client/src/e2e/**/*.js.map
+client/src/main.js
+
+# compiled output
+client/dist
+client/tmp
+
+# dependencies
+client/node_modules
+
+# misc
+client/.sass-cache
+client/connect.lock
+client/coverage/*
+client/libpeerconnection.log
+client/npm-debug.log
+client/testem.log
+client/typings
+
+# e2e
+client/e2e/*.js
+client/e2e/*.map
+
+#System Files
+client/.DS_Store
+client/Thumbs.db
+.mvn/
+mvnw
+mvnw.cmd
+src/main/resources/templates/
+/client/node_modules/
+/client/e2e/

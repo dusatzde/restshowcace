@@ -1,0 +1,49 @@
+<div *ngIf="genres" id="new-film-form">
+  <h2>Add new Film</h2>
+  <form (ngSubmit)="onSubmit()" #newFilmForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" [(ngModel)]="film.name" class="form-control" name="name" id="name"  #name="ngModel"   required>
+    </div>
+    <div [hidden]="name.valid || name.pristine"
+         class="alert alert-danger">
+      Name is required
+    </div>
+
+
+    <div class="form-group">
+      <label for="director">Director</label>
+      <input type="text" [(ngModel)]="film.director" class="form-control" name="director"  #director="ngModel" id="director" required>
+    </div>
+    <div [hidden]="director.valid || director.pristine"
+         class="alert alert-danger">
+      Director is required
+    </div>
+
+
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input type="number" [(ngModel)]="film.year" pattern="[0-9]{4}" min="1900" max="2030" name="year" class="form-control"
+             id="year" #year="ngModel">
+    </div>
+    <div [hidden]="year.valid || year.pristine"
+         class="alert alert-danger">
+      Year is from 1900 to 2030
+    </div>
+
+
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <select class="form-control" [(ngModel)]="film.genre" name="genre" id="genre" required>
+        <option *ngFor="let genre of genres" [value]="genre.name">{{genre.name}}</option>
+      </select>
+    </div>
+
+    <button type="button" class="btn" (click)="hideForm()">Cancel</button>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!newFilmForm.form.valid">Submit</button>
+
+  </form>
+
+</div>
+

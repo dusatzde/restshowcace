@@ -1,0 +1,15 @@
+html, body{
+  margin: 0px;
+  padding: 0px;
+  background: #03213B;
+}
+
+section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #EEF0EF;
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
+}

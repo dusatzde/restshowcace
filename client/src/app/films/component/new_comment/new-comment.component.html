@@ -1,0 +1,10 @@
+<h2>Add new comment</h2>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <textarea placeholder="Your opinion" [(ngModel)]="comment.text" class="form-control" name="text" id="text"></textarea>
+  </div>
+
+  <button type="button" class="btn" (click)="hideForm()">Cancel</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>

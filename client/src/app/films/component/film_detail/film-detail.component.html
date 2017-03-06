@@ -1,0 +1,14 @@
+<div *ngIf="film">
+
+  <h2>{{film.name}}</h2>
+  <ul>
+    <li>Genre: {{film.genre}}</li>
+    <li>Director: {{film.director}}</li>
+    <li>Year: {{film.year}}</li>
+  </ul>
+
+  <div id="comments-area">
+    <film-comment-list [filmId]="film.filmId"></film-comment-list>
+  </div>
+
+</div>

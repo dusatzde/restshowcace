@@ -1,0 +1,22 @@
+<div *ngIf="comments" id="film-comments-area">
+  <h3>{{comments.length}} Comments:</h3>
+  <div class="">
+    <button id="submit-new-comment" (click)="openNewCommentForm()" class="btn btn-primary"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Submit new</button>
+  </div>
+
+  <div *ngIf="newCommentFormSubmited" class="alert alert-success fade in">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Success!</strong> Your comment has been sent successfully.
+  </div>
+
+  <div *ngIf="newCommentFormVisibility" id="new-comment-form-area">
+    <film-new-comment [filmId]="filmId" (formVisibilityNotify)="onNewCommentFormVisibilityNotify($event)"
+                   (newCommentNotify)="onNewCommentNotify($event)">
+
+    </film-new-comment>
+  </div>
+
+   <div *ngFor="let comment of comments">
+    <film-comment [comment]="comment"></film-comment>
+  </div>
+</div>

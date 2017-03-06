@@ -1,0 +1,67 @@
+<!--header-->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container">
+
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand" href="#page-top"><span id="logo">{{title}}</span><span id="logo-description"> Angular 2 workshop</span></a>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden">
+          <a  [routerLink]="['/film']"></a>
+        </li>
+        <li class="page-scroll">
+          <a [routerLink]="['/film']">Films</a>
+        </li>
+        <li class="page-scroll">
+          <a [routerLink]="['/login']">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+<div id="header-part"></div>
+
+<!--content-->
+<section>
+  <div id="main-content" class="container">
+    <router-outlet></router-outlet>
+  </div>
+</section>
+<!--footer-->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="footer-menu">
+          <li><a href="https://databaze-knih.herokuapp.com/dist/api-doc.html" target="_blank">API doc</a></li>
+          <li><a href="https://databaze-knih.herokuapp.com/v2/api-docs?group=api" target="_blank">Swagger contract</a>
+          </li>
+          <li><a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2" target="_blank">About
+            OAuth2</a></li>
+          <li><a href="https://github.com/dusatzde/restshowcace" target="_blank">Source codes on GitHub</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h2>Workshop REST API</h2>
+        <h3>Spring Boot on Heroku, OAuth2 & Angular client</h3>
+        <p>This project is a sample project for learning purpose only. All source codes are hosted on <a
+          href="https://github.com/dusatzde/restshowcace" target="_blank">GitHub</a>. Enjoy.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <div class="copy">Copyright 2017 Zdenek Dusatko</div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+

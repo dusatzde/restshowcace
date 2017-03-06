@@ -1,0 +1,58 @@
+nav{
+  background: #03213B;
+}
+
+nav a{
+  color: #F2F3F5;
+}
+
+nav a:hover{
+  color: #ffffff;
+}
+
+#logo{
+  color: #DF5562;
+  font-size: 20pt;
+}
+
+#logo-description{
+  font-size: 10pt;
+}
+
+#main-content{
+  min-height: 550px;
+}
+
+footer{
+  padding-top: 50px;
+  color: #ffffff;
+  background: #03213B;
+  min-height: 350px;
+}
+
+footer h2, footer h3{
+  color: #DF5562;
+}
+
+footer a{
+  font-size: 14pt;
+  color: #cccccc;
+}
+
+.copy{
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.copy a{
+  color: #ffffff;
+  font-size: 1em;
+}
+
+.footer-menu{
+  padding-top: 50px;
+}
+
+#header-part{
+  height: 51px;
+}

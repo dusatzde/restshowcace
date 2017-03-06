@@ -1,0 +1,16 @@
+h2 {
+  color: #DF5562;
+}
+
+.bordered {
+  display: block;
+
+  padding: 40px;
+  margin-bottom: 10px;
+  background: #ffffff;
+
+}
+
+.bordered:hover{
+  text-decoration: none;
+}
