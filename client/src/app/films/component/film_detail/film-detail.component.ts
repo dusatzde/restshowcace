@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {Film} from "../../model/film";
 import {FilmService} from "../../service/film.service";
 import {Router, ActivatedRoute, Params} from "@angular/router";
@@ -11,11 +11,10 @@ import {Router, ActivatedRoute, Params} from "@angular/router";
 })
 export class FilmDetailComponent implements OnInit {
 
-  film: Film;
+  film: Film = new Film();
 
   constructor(private filmService: FilmService,
-              private route: ActivatedRoute,
-              private router: Router,) {
+              private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {

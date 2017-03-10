@@ -15,7 +15,7 @@ export class CommentListComponent implements OnInit {
   @Input()
   private filmId: number;
 
-  private comments: Comment[];
+  private comments: Comment[] = [];
   private newCommentFormVisibility : boolean = false;
   private newCommentFormSubmited : boolean = false;
 

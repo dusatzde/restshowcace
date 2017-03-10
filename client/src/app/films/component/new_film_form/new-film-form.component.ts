@@ -10,7 +10,7 @@ import {Film} from "../../model/film";
 })
 export class NewFilmFormComponent implements OnInit{
 
-  private genres : Genre[];
+  private genres : Genre[] = [];
   private film: Film = new Film();
 
   @Output()
