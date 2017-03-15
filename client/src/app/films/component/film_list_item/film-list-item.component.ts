@@ -1,14 +1,14 @@
-import {OnInit, Component, Input} from "@angular/core";
-import {Film} from "../../model/film";
+import { Component, Input } from '@angular/core';
+import { Film } from '../../model/film';
 
 @Component({
     selector: 'film-list-item',
     templateUrl: 'film-list-item.component.html',
-    styleUrls:['film-list-item.component.css']
+    styleUrls: ['film-list-item.component.css']
 })
-export class FilmListItemComponent{
+export class FilmListItemComponent {
 
     @Input()
-    film: Film;
+    public film: Film;
 
 }

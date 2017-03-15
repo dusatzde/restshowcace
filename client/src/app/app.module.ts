@@ -1,11 +1,9 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import {AppComponent} from './app.component';
-import {SharedModule} from "./shared/shared.module";
-import {AppRountingModule} from "./app-routing.module";
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
-
+import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
+import { AppRountingModule } from './app-routing.module';
 
 @NgModule({
     declarations: [
@@ -15,7 +13,6 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
         BrowserModule,
         SharedModule,
         AppRountingModule,
-        NgbModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -1,8 +1,8 @@
-export class Comment{
-  commentId : number;
-  date : string;
-  text: string;
-  filmId: number;
-  userId: number;
-  userName: string;
+export class Comment {
+  public commentId: number;
+  public date: string;
+  public text: string;
+  public filmId: number;
+  public userId: number;
+  public userName: string;
 }

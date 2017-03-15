@@ -1,8 +1,7 @@
-import {Response} from "@angular/http";
-import {Observable} from "rxjs";
+import { Response } from '@angular/http';
+import { Observable } from 'rxjs';
 
-
-export class AbstractHttpService{
+export class AbstractHttpService {
 
   protected handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure

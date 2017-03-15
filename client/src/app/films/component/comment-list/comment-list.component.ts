@@ -1,8 +1,8 @@
-import {Component, OnInit, Input} from "@angular/core";
-import {FilmService} from "../../service/film.service";
-import {Comment} from "../../model/comment";
-import {AuthService} from "../../../shared/auth/auth.service";
-import {CanActivate, Router} from "@angular/router";
+import { Component, OnInit, Input } from '@angular/core';
+import { FilmService } from '../../service/film.service';
+import { Comment } from '../../model/comment';
+import { AuthService } from '../../../shared/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'film-comment-list',
@@ -13,33 +13,32 @@ import {CanActivate, Router} from "@angular/router";
 export class CommentListComponent implements OnInit {
 
   @Input()
-  private filmId: number;
+  public filmId: number;
 
-  private comments: Comment[] = [];
-  private newCommentFormVisibility : boolean = false;
-  private newCommentFormSubmited : boolean = false;
+  public comments: Comment[] = [];
+  public newCommentFormVisibility: boolean = false;
+  public newCommentFormSubmited: boolean = false;
 
-  constructor(private filmService: FilmService, private authService : AuthService, private router : Router) {
+  constructor(private filmService: FilmService, private authService: AuthService, private router: Router) {
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.filmService.getFilmComments(this.filmId)
       .subscribe((comments: Comment[]) => this.comments = comments);
   }
 
-  public onNewCommentNotify(comment : Comment):void {
+  public onNewCommentNotify(comment: Comment): void {
     this.newCommentFormSubmited = true;
     this.newCommentFormVisibility = false;
     this.comments.push(comment);
   }
 
-  public onNewCommentFormVisibilityNotify(visible : boolean):void {
+  public onNewCommentFormVisibilityNotify(visible: boolean): void {
     this.newCommentFormVisibility = visible;
   }
 
-  public openNewCommentForm() : void{
-
-    if(!this.authService.isAuthenticated()){
+  public openNewCommentForm(): void {
+    if (!this.authService.isAuthenticated()) {
       this.router.navigate(['login']);
     }
     this.newCommentFormSubmited = false;

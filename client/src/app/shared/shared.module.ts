@@ -1,9 +1,9 @@
-import {NgModule} from "@angular/core";
-import {CommonModule} from "@angular/common";
-import {FormsModule} from "@angular/forms";
-import {JsonpModule, HttpModule} from "@angular/http";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { JsonpModule, HttpModule } from '@angular/http';
 
-import {AuthService} from "./auth/auth.service";
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   imports: [
@@ -22,6 +22,6 @@ import {AuthService} from "./auth/auth.service";
     AuthService,
   ]
 })
-export class SharedModule{
+export class SharedModule {
 
 }

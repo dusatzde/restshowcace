@@ -1,7 +1,7 @@
 export class Film {
-  filmId: number;
-  year: number;
-  name: string;
-  director: string;
-  genre: string
+  public filmId: number;
+  public year: number;
+  public name: string;
+  public director: string;
+  public genre: string;
 }

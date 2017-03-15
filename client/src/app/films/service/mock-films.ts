@@ -1,6 +1,5 @@
-import {Film} from "../model/film";
-import {Comment} from "../model/comment";
-
+import { Film } from '../model/film';
+import { Comment } from '../model/comment';
 
 export  const MOCK_FILMS: Film[] = [
     { filmId: 1001, name: 'Pulp Fiction', year: 1994, director: 'Quentin Tarantino', genre: 'crime, drama'},

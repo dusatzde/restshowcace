@@ -1,7 +1,6 @@
-import {Component, Input, Output, EventEmitter} from "@angular/core";
-import {Film} from "../../model/film";
-import {FilmService} from "../../service/film.service";
-import {Comment} from "../../model/comment";
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { FilmService } from '../../service/film.service';
+import { Comment } from '../../model/comment';
 
 @Component({
   selector: 'film-new-comment',
@@ -11,36 +10,29 @@ import {Comment} from "../../model/comment";
 export class NewCommentComponent {
 
   @Input()
-  private filmId: number;
-  private comment : Comment = new Comment();
+  public filmId: number;
+  public comment: Comment = new Comment();
 
   @Output()
-  newCommentNotify: EventEmitter<Comment> = new EventEmitter<Comment>();
+  public newCommentNotify: EventEmitter<Comment> = new EventEmitter<Comment>();
 
   @Output()
-  formVisibilityNotify: EventEmitter<boolean> = new EventEmitter<boolean>();
+  public formVisibilityNotify: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor(private filmService:FilmService){
+  constructor(private filmService: FilmService) {
 
   }
 
   public onSubmit() {
     this.comment.filmId = this.filmId;
-
-    // this.comment.userId =
-    //   this.comment.userName =
-    this.filmService.addComment(this.comment).subscribe(comment =>{
-
-
-      debugger;
+    this.filmService.addComment(this.comment).subscribe( (comment) => {
       this.newCommentNotify.emit(comment);
-      this.filmService.addComment(comment)
+      this.filmService.addComment(comment);
     });
   }
 
-  public hideForm(){
+  public hideForm() {
     this.formVisibilityNotify.emit(false);
   }
-
 
 }

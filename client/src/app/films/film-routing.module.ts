@@ -1,7 +1,7 @@
-import {RouterModule, Routes} from "@angular/router";
-import {NgModule} from "@angular/core";
-import {FilmListComponent} from "./component/film_list/film-list.component";
-import {FilmDetailComponent} from "./component/film_detail/film-detail.component";
+import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { FilmListComponent } from './component/film_list/film-list.component';
+import { FilmDetailComponent } from './component/film_detail/film-detail.component';
 
 const routes: Routes = [
   {path: '', component: FilmListComponent},
